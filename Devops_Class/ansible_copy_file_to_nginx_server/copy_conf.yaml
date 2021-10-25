@@ -1,0 +1,10 @@
+---
+- name: copy proxy.conf to all hosts
+  hosts: all
+  become: yes
+  tasks:
+
+    - name: copy files to remote hosts
+      copy:
+        src: proxy.conf
+        dest: /etc/nginx/proxy.conf
